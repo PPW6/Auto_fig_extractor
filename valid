@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 12 14:01:40 2024
+
+@author: PPW
+"""
+
+import random
+import json
+import os
+from openpyxl import Workbook, load_workbook
+
+def png_list(img_scatter_png):
+    length = os.listdir(img_scatter_png)     
+    PNGnames = []
+    for file in length: 
+        if file.endswith(".png"):             
+            PNGnames.append(os.path.splitext(file)[0])
+    return PNGnames
+
+def record2csv(name, l, num, excel_file, json_data):
+    x_data = json_data['x_data']
+    y_data = json_data['y_data']
+    wb = Workbook()
+    wb = load_workbook(excel_file) 
+    sheet = wb.active
+#    print(num)
+    for i in range(0, len(x_data)):
+        sheet.cell(row = num+i, column=1, value=l)
+        sheet.cell(row = num+i, column=2, value=x_data[i])
+        sheet.cell(row = num+i, column=3, value=y_data[i])
+        sheet.cell(row = num+i, column=4, value=name)
+    wb.save(excel_file)
+
+
+#list = range(0, 412)
+#index = random.sample(list, 50)
+#index = sorted(index)
+index = [4, 7, 9, 15, 27, 34, 40, 50, 51, 59, 61, 64, 87, 88, 92, 107, 108, 119, 133, 140, 145, 161, 162, 168, 170, 173, 183, 185, 195, 198, 203, 205, 227, 239, 265, 277, 290, 294, 303, 309, 332, 336, 349, 356, 369, 385, 388, 395, 400, 404]
+img_scatter_png = ".\object_detection\scatter"
+excel_file = "output_key1.xlsx"
+PNGnames = png_list(img_scatter_png)
+PNGname = [PNGnames[i] for i in index]
+num = 1
+
+png_id=[id[:-31] for id in PNGname]
+#curve_path = ['10.1016-j.jmrt.2019.06.019-3-a_colorcut_cluster_2',
+#'10.1016-j.jmrt.2019.06.019-3-a_colorcut_cluster_4',
+#'10.1016-j.matchar.2018.08.003-13-a_colorcut_cluster_7',
+#'10.1016-j.matchar.2023.112904-3-b_colorcut_cluster_4',
+#'10.1016-j.msea.2019.04.110-7-a_colorcut_cluster_6',
+#'10.1016-j.msea.2019.05.003-6-a_colorcut_cluster_5',
+#'10.1016-j.msea.2020.140598-2-c_colorcut_cluster_7',
+#'10.1016-j.msea.2021.142511-2-c_colorcut_cluster_2'
+#]
+#img_curve_png = ".\object_detection\images_key_data\curve"
+#for l in range(0,len(curve_path)):
+#    with open(os.path.join(img_curve_png,curve_path[l]+'final_record.json'), 'r', encoding='utf8') as fp:
+#        json_data = json.loads(fp.read())
+#        name = PNGname[l][:-12]
+#    origin_data = json_data['data']
+#    origin_data = sorted(origin_data, key=lambda x:x[1])
+#    print(origin_data[-1])
+for l in range(0,len(PNGname)):
+#for l in range(0,2):
+    with open(os.path.join(img_scatter_png,PNGname[l]+'.json'), 'r', encoding='utf8') as fp:
+        json_data = json.loads(fp.read())
+        name = PNGname[l][:-12]
+    record2csv(name, l, num, excel_file, json_data)
+    num += len(json_data['x_data'])
