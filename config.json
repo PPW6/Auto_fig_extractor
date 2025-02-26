@@ -6,8 +6,8 @@
         176,
         384
       ],
-      "tensorPath": "https://github.com/PPW6/Scientific_fig_Extractor/blob/main/test_embedd.tsv",
-      "metadataPath": "https://github.com/PPW6/Scientific_fig_Extractor/blob/main/test_metadata.tsv"
+      "tensorPath": "https://raw.githubusercontent.com/PPW6/Scientific_fig_Extractor/refs/heads/main/test_embedd.tsv",
+      "metadataPath": "https://raw.githubusercontent.com/PPW6/Scientific_fig_Extractor/refs/heads/main/test_metadata.tsv"
     }
   ]
 }
