@@ -1,0 +1,176 @@
+Cu alloy predicted to be hard or conductivity by the ML model are chosen to be produced and tested by the experiment .
+The strategy of picking experimental points can affect the accuracy and generalization ability of ML model , as discussed in fig S5 .
+A higher predicted value resulting from the ML model is in accordance with an alloy with higher performance in reality , showing the significance of guiding by the ML-based approach to design Cu alloy with high hardness and conductivity.
+Overall , the experimental results based on microstructure characterization and property testing collectively support the high strength and conductivity of the predicted alloy based on the present ML model and explain the physical origin of the corresponding performance enhancement.
+They are expected to be used as conduct materials for the manufacture of the excitation windings in pulsed high-field magnets.
+ML models studied the phase selection rules for different high-entropy alloys, indicating better performance of neural networks.
+The variation of parameters related to the ML models during the algorithm selection is summarized.
+The overall properties are further improved with a slight increase of conductivity and a moderate augment of UTS for samples SAT20 and SAT40.
+However , it is essential to emphasize that while adding elements can enhance mechanical properties , they may simultaneously reduce conductivity .
+Therefore , the variation of tensile strength and conductivity during secondary aging at 300°C indicate that the optimal aging state with favorable comprehensive properties has presented in 0.5 h duration .
+With prolonging the aging time , the increase rate decreased and the conductivity reached 25.5%IACS for the aging time of 8 h .
+With increased second stage aging time at 400°C, the hardness approached high values, then decreased slightly, during which the conductivity increased continuously.
+4 Discussion It is well known that both the mechanical and electrical properties of metallic materials are influenced by defects such as grain boundaries , solute atoms , dislocations , porosities , second phases , etc .
+It has been demonstrated that the propagation of an initial small crack is affected by the presence of microstructural inhomogeneities , such as GBs , phase boundaries , and nonmetallic inclusions .
+CuFe alloy are typical precipitation-strengthened alloy [ 12 ] , and three approaches are commonly applied to enhance the comprehensive properties .
+Besides , precipitation strengthening ( σ p1 , dominated by ordered phases ) also have main contribution to yield strength in both Cu-9Ni-6Sn- ( 0.2Nb ) alloy after aging treatment .
+Cu-10Fe-0.4Si alloy is designed according to the typical silicon steel composition ratio to improve the magnetic properties through the Fe-Si phase.
+The hardness values of 4 and 3%Ti ternary alloy in peak-aged condition were 326 and 277Hv10 , respectively .
+The comparison between calculated and experimental yield strength of the Cu-Co-Ti alloy subjected to different treatments is summarized in fig 9 .
+The ductility (in terms of % elongation) of ternary Cu-Ti-Cr alloy in solution treated condition was slightly higher compared to that of the binary Cu-Ti alloy in the same condition.
+Cu-Ti alloy could possess high ductility, elasticity, heat resistance, fatigue resistance, excellent workability and the lowest bending radius ratio after suitable treatments.
+When the grains deform , the grain boundaries become the obstacles for the dislocation motion , and dislocation can not get through the grain boundary layer , which prevents material deformation from occurring , thus strengthening the alloy .
+The dislocations intertwine with each other and a large number of dislocation cells form with the increase of rolling deformation .
+High-density dislocations significantly reduce the dislocation storage efficiency in the grains during reloading, which would reduce the plasticity of metals.
+The increment of strength contributed by dissolved Mg atoms can be expressed as ∆σ_ss = MG ε_ss^3 / 2 c^1 / 2 700.
+The IPF diagrams after the second cold rolling show average grain sizes of the samples.
+The present study also suggested that fiber-like , Ni 2SiDPs could increase the strength of Cu-Ni-Si alloy , and high Ni and Si content in Cu-Ni-Si alloy could produce the excessive amount of DPs over the theoretical limit from equilibrium solubility .
+The precipitation particles were difficult to shear by dislocation, and the dislocation only bypassed them, resulting in effective strengthening by the Orowan mechanism.
+It has been estimated that the substitutional atoms make migration energy of vacancies drastically increase in the Fe-8Cr alloy.
+Several Cu alloys with higher target properties than the original training data are thus obtained, reaching a conductivity of 94.63%IACS and hardness of 200.89Hv.
+After the secondary CR ( 50% ) and AT ( 400°C , 2 h ) , those of the designed Cu-Cr-P alloy were 380MPa , 340MPa , and 91.2%IACS , respectively.
+Cu-Ni-Si alloy exhibit a tensile strength of 600-800 MPa and conductivity of 30-50%IACS.
+The prepared alloy had a tensile strength of 608MPa, yield strength of 583MPa and conductivity of 58%IACS.
+The change in morphology of the intermetallic compounds systematically improved the alloy’s properties.
+For dilute copper alloy, there would be only about 1-3%IACS conductivity decrease after cold working, caused by the increase of dislocations.
+Mg, as a solid solution element, diffuses uniformly in Cu matrix and has a great pinning effect on the movement of dislocations and grain boundaries.
+The recrystallization fraction of the second phase increased from 5.38% to 38.1% after final rolling and stress relief annealing.
+Since Cu-Ni-Be and Cu-Ni-Be-Si alloys possess a similar grain size, the grain size makes no contribution to the strength improvement.
+There is no obvious difference in grain size between these two alloys, which means 0.2wt%Si addition can hardly influence the grain size of Cu-Ni-Be alloy.
+The decrease in inter-distance between precipitates increases the strength of Cu-Ni-Si alloy.
+The variation of Vickers hardness of the solution treated Cu-10Ni-3Al-0.8Si alloy isothermally aged at different temperatures is shown.
+The P element formed Cr3P particles with residual Cr element in the matrix to heighten the conductivity of the Cu-Cr-P alloy.
+To further enhance the overall performance of the alloy, a secondary cold rolling with a deformation of 60% was conducted based on the optimal primary aging process.
+Also it was noticed that anneal hardening effect appeared in the alloy as a result of solute silver segregation to dislocations , analogous to the formation of Cottrel atmospheres in interstitial solid solutions , which results in strengthening and hardness increases [ 4-8,20,21 ] .
+The tensile strength of hydrogenated Cu-Ti alloy increases with increasing the difference in the composition of decomposed phases in forming Ti hydrides .
+3 Results and discussion fig 1 shows the microstructure evolution of phase transformation of the solution treated sample aged in a salt bath at 450°C for different times , followed by water-cooling .
+When the supersaturated solid solution ( SSS ) of Cu-8.0Ni-1.8Si alloy was aged at low temperature of 450°C , the phase transformations were rich and interesting .
+4°Conclusions The phase transformations behavior of Cu-8.0Ni-1.8Si alloy during aging at different heat treat conditions after solution treatment has been studied .
+The large spherical Fe phase particle had a high Fe content ( ∼88wt% ) , and the yield strength was much higher than that of the Cu matrix .
+The fine grain strengthening is expressed using the Hall-Petch relation.
+We predict five Cu alloy with high hardness values by employing ML models trained by the original training data and the training data in loop 1 and 2 , respectively .
+The ML models were trained by “ discarded ” experimental data with unsatisfactory properties produced by “ trial and error ” experiments .
+Features within the same group are all highly correlated , thus only one of them can be retained by evaluating the effect of specific features on the RMSE of the ML model .
+Finally , the performance of ML models with a different combination of reserved features is compared , obtaining the optimal one with the lowest RMSE.
+And TEM samples were primarily punched to Ф3 mm circle sheets and then ground to 50 µm , followed by twin-jet electro-polishing using a mixed solution of CH 3 OH : HNO 3 = 7 : 3 under a temperature of − 30°C~− 20°C.
+The microstructures of the sample taken from the aging sheets were observed using a Tecnai G 2 20 transmission electron microscope with an operation voltage of 200 kV .
+The scanning electron microscopy ( SEM ) and energy despersive X-ray spectroscopy ( EDX ) observation was done using Sirion200 .
+In a previous investigation of different Zr additions to CuAg7 it was shown that the area fraction of Cu 4 AgZr strongly depends on the Zr content .
+IfZr is believed to be located at the grain boundaries and thus limits Ag diffusion along the grain boundaries an increased Zr content is needed in the case of a fine-grained , dynamically recrystallised material .
+In the multistage interrupted artificial aging treatment , the samples with high residual stress were repeated heated to a critical aging temperature with high heating rate which reverse the path of quenching to reduce residual stress , and then followed with a stage of continuous artificial aging treatment for guaranteeing mechanical properties .
+The increment of the yield strength caused by solid solution strengthening for Cu-0.24Cr-0.20Sn alloy, Cu-0.22Cr-0.65Sn alloy and Cu-0.67Cr-0.23Sn alloy was estimated to be ~24.1 MPa, ~45.8 MPa and ~25.3 MPa, respectively.
+The activation energies for modulation decomposition and modulation structure growth are different, indicating that these are two distinct processes.
+Cu-Cr-Sn-Zn alloy ingots were induction-melted in a quartz tube and jetted under pure argon.
+Cu-Co-Ti alloy was melted and cast in a medium-frequency induction furnace under argon atmosphere.
+It can be seen from fig 4 ( a ) that there are some large phases in Cu matrix , which were generated during solidification and kept undissolved during homogenization and solution treatment .
+The data preparation step , in which the input vectors are composed of main inputs and additional features , is fundamental to the ML model .
+The final ML model is made of four main inputs ( aging time , atomic fraction of Co , Fe and Ti ) , three additional features for hardness prediction and two for conductivity prediction .
+The Cu-9Ni-6Sn alloy , designated as C72700 according to ASTM B740-84 , is widely used in the electronic industry for bushings , bearings , springs , and electronic connectors because of its high strength , good stress relaxation , conductivity , and corrosion resistance , etc .
+According to Matthiessen’s law, the volume fraction of the precipitates satisfies the relationship with conductivity.
+The kinetics Avrami equation of phase transformation can be expressed.
+The study indicated maximum hardness , average tensile strength , elongation and average conductivity of 345Hv , 1180MPa , 2.75% , and 26.5% International Annealed Copper Standard ( IACS ) respectively at ageing time of 30mins .
+During discontinuous precipitation ( DP ) , nucleation of equilibrium phase starts at grain boundaries and then a transformation front progressively moves inward the grain forming a typical lamellar structure with specific orientation relationships between the fcc Cu and the fcc Ag phases [ 11 ] .
+However , most previous studies on the phase transformation investigated the precipitation process for the Cu-3.1Ni-1.4Si alloy with low solute concentrations .
+For the Cu-Ni-Si alloy with low solute concentrations , most previous studies on the phase transformations usually investigated the precipitation process at only one temperature or at most a few temperatures .
+Therefore , a study of the phase transformation behavior for a Cu-Ni-Si-based alloy with high solute concentrations in a wide temperature range has been carried out in this paper.
+The lattice constants of γ′ phase and γ phase are very close and the corresponding diffraction peaks are also close [ 15 ] .
+Because of its excellent comprehensive properties , copper alloy are widely used in nuclear reactor heat sinks , high-end electrodes , electronic packaging , and lead frames of large-scale integrated circuits [ 1-7 ] .
+Cu-Cr alloys are considered as potential materials for the next generation of high-speed railway and ultra-large-scale integrated circuit lead frames.
+High concentrations of Ni and Si make Cu-Ni-Si alloy higher strength ( & gt ; 1000MPa ) and sufficient conductivity ( & gt ; 25%IACS ) , indicating they are potential elastic conductivity materials for elastic conductivity springs , elastic conductivity switches , and elastic conductivity reeds , as a replacement of Cu-Be alloy.
+Cu matrix has a face central cubic structure , a = 0.3615 nm , β-Ni 3Si phase precipitate has a prime cubic structure , a = 0.3351 nm .
+The index results in fig 6 ( c ) and ( e ) illustrated that two kinds of precipitate phases of β-Ni 3Si and δ-Ni 2Si appeared in the samples .
+According to fig 3 c , the two kinds of precipitates were determined to be β-Ni 3Si phase and δ-Ni 2Si phase .
+Solute-rich particles in Cu-Cr alloy mainly contain Cr element , while Cr , Si elements exist in the spherical or short-rod solute-rich phases in the Cu-Cr-Zr-Ni-Si alloy .
+Some researchers suggest the precipitate in the Cu-Zr system is Cu~51 Zr~14 phase with hcp lattice structure ; while others [ 26,28,29 ] believe that the precipitate is Cu 5Zr phase having the same fcc lattice structure as that of the copper matrix , which is consistent with our investigation.
+Although all the available experimental data have been used to train the ML models , the total number of training datapoints are limited .
+Therefore , the fitting of a small sample ( training a ML model with a few hundred pieces of training data ) or classification problems on alloy systems has attracted increasing attention.
+Copper base alloy with high strength and good conductivity are generally solution treated by high temperature quenching and subsequent ageing .
+When the sample were overaging treated at 450°C for 48 h , four kinds of phases ( Cu-matrix , β-Ni 3Si , δ-Ni 2Si and δ′-Ni 2Si ) were distinguished in the sample and the orientation relationship between Cu-matrix and precipitates can be expressed as : ( 0 2 2 ) Cu // ( 0 2 2 ) β // ( 1 0 0 ) δ , ( 0 2 ¯ 2 ) Cu // ( 0 2 ¯ 2 ) β // ( 1 0 0 ) δ′ , [ 1 0 0 ] Cu // [ 1 0 0 ] β // [ 0 0 1 ] δ′ // [ 0 0 1 ] δ .
+δ-Ni 2Si and δ'-Ni 2Si phases are marked to distinguish the two orientations of δ-Ni 2Si particles in fig 8 d .
+When the aging time was prolonged to 4 h , the precipitates were dominated by γ′ phase , indicating that the γ″ phase was basically transformed into γ′ phase .
+It is indicated that the phase transformation of GP zone→γ″ phase occurred in the Cu-1.7Be alloy aged at 325°C for 2 h .
+The basis for the selection of the representative feature is the impact of the feature on the RMSE of ML model .
+TEM micrographs of cold-rolled Cu-Cr-Sn alloy with different compositions aged at 400°C for 2 h are shown.
+The slopes of the two straight lines in fig 10 indicate that the Ni 2Si phase activation energies for the Cu-Ni-Si-Mg and Cu-Ni-Si-Mg-Nb alloy are 46.94 kJ/mol and 18.87 kJ/mol , respectively .
+The formation enthalpies of Ni3Al, δ-Ni2Si and NiSi phases are negative, while the NiAl phase shows the lowest formation enthalpy.
+The morphology of the fracture surface was observed by SEM for the Cu-8.0Ni-1.8Si-0.15Mg alloy.
+With respect to the large number of grain boundaries , one can estimate that the mechanical strength of nanocrystalline metallic materials is enhanced as the dislocation motion is also hindered by grain boundaries .
+Compared to metals with coarse grains , nanocrystalline metals exhibit a much higher strength than observed in , for example , pure copper .
+ML models with additional features usually show better accuracy in both classification and regression problems
+ML models with additional features usually show better accuracy in both classification and regression problems [ 24 , 25 ] .
+The analysis of the combination results also helps to describe the relationship between specific features and the whole ML model .
+Note that features in group 2 seem to contribute nothing to accelerate the performance of the ML model , while some of them even increase the RMSE .
+This suggests that the ML model can be trained directly by the additional features , possibly because the features can partly describe the compositional information of Cu alloy.
+It should be noted that the genetic algorithm aims to quantify the significance of additional features to the ML model by the survival rate .
+The additional features calculated by physical equations were introduced and combined by correlation-based analysis and genetic algorithm , further minimizing the error of prediction and reducing the complexity of the ML models .
+In the temperature range of 160-400°C, the hardness values of the Cu-6.6wt%Ag alloy increase remarkably for all applied deformation degrees.
+As shown in fig 2 , increasing manganese content to 1.5wt% led to a slight reduction of both the tensile strength and hardness of Cu-3Si-xMn alloy .
+A large number of fine dispersive coherent or semi-coherent precipitates form in the alloy through reasonable aging process , which can significantly impede dislocation movement for strengthening and reduce alloy elements in copper matrix for high conductivity [ 13-15 ] .
+The conductivity rose rapidly at the beginning stage of the aging , and the increase rate of the conductivity decreased apparently as the aging proceeded .
+At the early stage of aging , due to the rapid precipitation of Cu-Be phase , the concentration of Be atom in the matrix rapidly reduced , resulting in a rapid increase of its conductivity .
+With the increase of the aging time , the amount of the precipitates increased slowly and its conductivity increased slowly .
+In addition , raising the aging temperature increased the amount of the precipitates , reduced the concentration of Be atom in the matrix , decreased the lattice distortion of the matrix and the scattering effect of electrons , which resulted in the increase of the conductivity of the alloy with an increase of the aging temperature.
+Mg , as a solid solution element , diffuses uniformly in Cu matrix and has a great pinning effect on the movement of dislocations and grain boundaries .
+Due to the higher diffusion rate of Mg in Cr than Cu , the Mg element is enriched at the interface between precipitates and matrix during diffusion progress , which will hinder the coarsening of precipitates and enhance the stability of the deformation microstructures [ 17,19,36 ] .
+The Mg element doesn ’ t react with Cr element to form an intermetallic phase , indicating that the role of the Mg element is similar to that of the Zr element [ 17,37,38 ] .
+The Mg element can pin grain boundaries and inhibit the growth of precipitates , which availably optimizes the mechanical properties , softening resistance and conductivity of Cu-Cr-Zr alloy.
+With the increase of the aging time , the concentration of Be atom in the matrix decreased , the driving force for the precipitation decreased and the precipitation rate also reduced.
+A dynamic model of aging precipitation was established and the yield strength of the peak-aged alloy was calculated.
+Precipitated phases coarsen easily with the increase of artificial aging temperature, affecting precipitation strengthening.
+Previous exploration found that add alloying elements like Ag , Nb , Si , Zr and Cr to the Cu-Fe alloy to optimize the structure and improve performance .
+The most effective way to improve the softening resistance and strength of Cu-Cr alloy is to add trace elements ( such as Zr , Mg , Ti , Ag , Nb , RE ) .
+The addition of trace elements ( such as Mg , Ti , Ni , Si , Nb ) in the Cu-Cr- ( Zr ) alloy will form new intermetallic compounds or aggregate around the Cr precipitates to retard their coarsening during solidification and aging .
+For instance , the addition of Mg element enhanced the stability of the deformation microstructures and thus improved the mechanical properties and softening resistance of Cu-Cr alloy .
+The addition of Mg element also can improve the stress relaxation and softening resistance of Cu-Cr alloy .
+The coarsening of the Cr precipitates can be restrained by Mg atoms segregated at precipitate-matrix interfaces, which improves the softening resistance performance.
+For hardness prediction , the best ML model is composed of three features : the local size mismatch ( D.r. )
+20192ACBL21013 , GJJ160605 ) , the Key Science and Technology Program of Jiangxi Province ( 20181BCB19003 ) , the Projects in Science and Technique Plans of Ningbo City ( No .
+Furthermore, we would like to express our gratitude to M. Frey, D. Seifert, T. Wolf, H. Trinks and S. Neumann for experimental support.
+Furthermore , new nanosized precipitates such as Cu 5Zr and Ni 2Si might be formed due to additions of elements [ 18,21,23 ] , which would increase a greater extent on the volume fraction and density of the precipitates and reduce the spacing between precipitates , eventually leading to the improvement of the strength of the alloy.
+4 Discussion 4.1 Effects of alloying element additions on the properties of Cu-Cr alloy Since the hot rolled-quenched Cu-Cr ( -Zr ) alloy are in a supersaturated state , it would decompose when the temperature is high enough to cause solute atom diffusion and re-distribution , and second phases are precipitated from the metastable alloy resulting in high strength and high conductivity .
+A study by Nnakwo ( 2019 ) has shown that by addition of tungsten ( W ) , Cu-3Si-W alloy showed average UTS of 286MPa , hardness of 358 BHN , ductility of 25.8% and conductivity of 61.25%IACS .
+Thus , in order to take technical advantage of the enhanced mechanical strength of the materials after cryogenic deformation , reasonable improvements regarding thermal stability have to be found.
+Strengthening upon aging in the hydrogen atmosphere , as the case of aging in vacuum , was proposed to occur predominantly via the precipitation of Cu 4Ti particles , while strengthening by precipitation of TiH 2 and by Ti solutes were relatively weak .
+The tensile strength of the samples aged in hydrogen and vacuum increased with aging time , reaching a maximum at 3 h , while that of the cold-rolled sample reached the maximum value at 24 h ( fig 2 b ) .
+The slight lower tensile strength of the wire aged in the hydrogen atmosphere as compared to that of the sample aged in vacuum could be attributed to the formation of the relatively coarse TiH 2 precipitates ( approximately 10 nm in fig 1 d ) instead of fine nanometer-sized Cu 4Ti precipitate in the former case .
+However , the tensile strength of the wire aged in the hydrogen atmosphere was higher than that of the cold-rolled sample aged in the same atmosphere .
+Numerous LAGBs are present within the SGs and deformed structure areas , while they are nearly absent within the RGs .
+Most of dissolved solute atoms are precipitated from the supersaturated alloy after aging treatment resulting in high strength and high conductivity .
+The peak strength of UTS increases with increase in aging temperature in the range of T ⩽ 390°C , whereas the time taken to the reach peak strength decreases .
+The combined aging process produces stable and uniform dislocations and precipitate nucleus in the first aging stage and followed cold deformation , then promoted the further precipitation in the secondary aging stage , resulting in inhibiting the precipitates coarsen and enhancing the strengthening effect .
+With the same ageing time , the conductivity of the samples aged at 500°C were higher than those of samples aged at 450°C .
+conductivity of the alloy increases with aging temperatures and reaches the peak after aging at 550°C , and then marginally decreases at the higher temperatures due to lower degree of supersaturation at higher temperatures .
+The high strength arises from the precipitation hardening and work hardening , and the high conductivity is ascribed to the precipitation process which depletes the concentration of dissolved solute atoms in the matrix .
+Respectively , the high strength is due to the interactions of strain hardening and precipitation hardening , and the excellent conductivity is attributed to the precipitation which leads to low solubility of solute atoms in copper matrix.
+Therefore , sample with a lower Nb content were prepared and an additional heat treatment was performed in order to increase the conductivity without reducing the strength significantly .
+First , the conductivity decreases with increasing Nb content and , second , the temperature applied during or after the consolidation process affects the conductivity .
+In comparison to the smaller conductivity of a Cu-10at%Nb alloy with 13%IACS , the conductivity of an alloy with a Nb content of 5at% has roughly doubled to 25%IACS .
+The increase of the conductivity with increasing temperature , however , is not a linear increase , as can be seen from fig 6 ( b ) , where the conductivity of a Cu-10at%Nb alloy is shown versus the temperature applied during consolidation .
+After consolidating the powder at 600°C the Cu-10at%Nb alloy has a conductivity of 13%IACS , which can be increased to about 20%IACS by increasing the temperature up to 800°C.
+At a quenching rate of 10.5°C/s, T phase is also observed on LAGBs and non-coherent Al3Zr particles.
+Under the same strain rate, flow stresses decreased with the increase of deformation temperature; while under the same deformation temperature, flow stresses decreased with the decrease of strains rate.
+reported an enhancement of both tensile strength and conductivity of Cu-Ni-Si alloy through reducing the size of Ni 2Si precipitates exerted by two-step rolling and aging process .
+Increase in secondary rolling reduction from 20% to 40% leads to a relatively significant strengthening from 568.4 MPa to 575.4 MPa.
+( 4 ) The achievement of high strength and high conductivity of the Cu-Zr-B alloy is attributed to suitable interactions of strain hardening and precipitation behaviors taking place during the double deformation-aging process.
+For Cu-Fe plate rolled with route 1 , the average grain size of Cu matrix is about 82.8 μm , which is 79.9 μm for plate rolled with route 2 .
+4 b and 5 b , and the corresponding fast fourier transform ( FFT ) images of the square frames regions are also inserted .
+The samples were etched in a solution containing FeCl3 (5 g), hydrochloric acid (25 ml) and alcohol (100 ml) and optical observations were made on a Leica optical microscope.
+The initiation cycles for a crack of grain-size length (l ≈ 100 μm) were lower for the CR-WQ-0.5A than the HR-AC-3A sample at both applied stress amplitudes.
+, no evidence for the formation of nanoscale annealing twins and an associated increase of hardness was found in the present cryo-drawn material .
+Intermediate heat treatments could promote Ag precipitating from Cu solution due to dislocations acting as nucleation sites.
+The heating curves from ambient temperature to 180°C with various heating modes were monitored by K-type thermocouples.
+As shown in fig 9 i , at this stage of aging , size of precipitates grew significantly ( up to around 15 nm ) .
+There is a significant recovery effect at 1/2 H , so no prominent dense low angle grain boundaries and high local misorientation are found , avoiding stress concentration in grains and grain boundaries .
+Cutix Plc , Nnewi , Nigeria supplied the copper wire while the silicon and magnesium metals powder were successfully supplied by the Kermel Chemical Reagent Co.Ltd.
+The strengthening effect in conventional solution and aging is limited because of low solubility of chromium in copper at the solution temperature.
+Shallow dimples formed on the fracture and as a result , quasi-cleavage fracture with shallow dimples appeared in the tensile sample .
+Uniformly distributed fine particles can be observed in the interior of grains under both conditions.
+Ti element has been added to Cu-Cr-Ti alloy to increase the driving force for precipitation , promote the precipitation of fine Cr , as well as delay the growth of Cr precipitates .
+On the whole , Y is the effective element in refining eutectic structure and promoting the Cr phases uniformly distribute.
+Cu6Ag0.5Cr and Cu6Ag0.2Zr contain less Ag precipitates which evolved into nano fibers as the main strengthening factor.
+Further , by performing IFFT for selected diffraction spots ( fig 4 h 1 ) and selected area g1 ( fig 4 i ) , it can be determined that this diffraction spots is close to the tetragonal structure with zone axis of Zr-rich .
+have proved that the trace Hf ( 0.2wt% ) element addition can effectively lower the SFE of Cu-Cr-Zr alloy and produce profuse deformation twins .
+Recent first-principles calculations indicates that the addition of Mg element can also decrease the SFE of copper alloy .
+Cu-Cr binary alloys are widely used in the electrical industry for their high tensile strength and conductivity.
+When the yttrium content is 0.02wt%, the alloy has the optimal comprehensive performance matching.
+With the material in this condition, a relatively high hardness should be maintained, and the electrical resistance should decrease.
