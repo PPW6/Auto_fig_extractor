@@ -46,7 +46,7 @@ Create the following folders to manage your input and output data:
 mkdir input_graph input_html input_txt input_xml output_graph
 ```
 **Project Structure**
-
+```
 Auto_FDE/
 ├── copper_article_archive.py 
 ├── main.py 
@@ -66,7 +66,7 @@ Auto_FDE/
 ├── input_txt/ 
 ├── input_xml/ 
 └── output_graph/ 
-
+```
 **Citing**
 ----------------------
 If you use this work (data or code), please cite the following work as appropriate:
