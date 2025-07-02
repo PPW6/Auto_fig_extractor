@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```bash
 python copper_article_archive.py
 ```
-### Figure data extraction
+### 3. Figure data extraction
 ```bash
 python main.py
 ```
