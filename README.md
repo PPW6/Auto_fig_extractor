@@ -1,4 +1,4 @@
-#Auoto_FDE ![Supported Python versions](https://shields.mitmproxy.org/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)
+# Auoto_FDE ![Supported Python versions](https://shields.mitmproxy.org/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)
 
 
 **Citing**
