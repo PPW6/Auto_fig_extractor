@@ -38,8 +38,6 @@ Download from (https://drive.google.com/file/d/1e0UTKwhgJN9DuD2qYsLcWcKd6WomvRkl
 - `training/`
 - `images/`
 - `utils/`
-- `protos/`
-- `core/`
 
 ### 5. Run Extraction Pipeline
 
@@ -50,7 +48,7 @@ cd object_detection
 python object_detection_curves.py
 
 # Run color decomposition
-python color_decomposition.py
+python color_decomposition_.py
 
 # Run final processing
 python final_achieve.py
@@ -58,14 +56,23 @@ python final_achieve.py
 
 ---
 
-## ✅ Modifications Made
+✅ Modifications and Our Contributions
+We made the following enhancements to improve robustness and accuracy:
 
-We made the following customizations based on the original project:
+✅ Reorganized the code into a modular and extensible pipeline.
 
-- Reorganized code into a modular pipeline.
-- Added `origin_data` class for structured batch processing.
-- Adjusted image and axis parsing logic to improve error handling.
-- Integrated EasyOCR and automatic axis scaling refinement.
+✅ Introduced the origin_data class for automated batch processing of images and axis parsing.
+
+✅ Improved error handling for axis recognition using EasyOCR with confidence scoring.
+
+🔍 Specific Algorithmic Enhancements
+Enhanced Color Decomposition Strategy:
+In color_decomposition_, we proposed a novel color segmentation strategy based on region-wise recognition, improving curve separation in overlapping or noise-prone areas.
+
+Robust Curve Extraction with Noise Filtering:
+In final_achieve, we incorporated outlier removal and integrated a DBSCAN-based clustering approach to remove noise points, significantly enhancing the accuracy and clarity of extracted curves.
+
+These contributions improve the system’s ability to handle complex plots with multiple overlapping curves or visual artifacts.
 
 ---
 
