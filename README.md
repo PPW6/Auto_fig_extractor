@@ -40,10 +40,32 @@ python main.py
 
 
 📁 **Recommended Folder Structure**
-Create folders to store and manage data
+
+Create the following folders to manage your input and output data:
 ```bash
 mkdir input_graph input_html input_txt input_xml output_graph
 ```
+**Project Structure**
+
+Auto_FDE/
+├── copper_article_archive.py 
+├── main.py 
+├── graph_classification.py 
+├── scatter.py 
+├── paddle_ocr/
+│ ├── models/
+│ ├── legend_name.py
+│ └── ... 
+├── object_detection/
+│ ├── models/
+│ ├── utils/
+│ ├── object_detection_curve.py
+│ └── ...
+├── input_graph/ 
+├── input_html/ 
+├── input_txt/ 
+├── input_xml/ 
+└── output_graph/ 
 
 **Citing**
 ----------------------
