@@ -56,23 +56,18 @@ python final_achieve.py
 
 ---
 
-✅ Modifications and Our Contributions
+## ✅ Modifications and Our Contributions
+
 We made the following enhancements to improve robustness and accuracy:
 
-✅ Reorganized the code into a modular and extensible pipeline.
+- **Enhanced Color Decomposition Strategy**  
+  In `color_decomposition_`, we proposed a novel color segmentation strategy **based on region-wise recognition**, improving curve separation in overlapping or noise-prone areas.
 
-✅ Introduced the origin_data class for automated batch processing of images and axis parsing.
+- **Robust Curve Extraction with Noise Filtering**  
+  In `final_achieve`, we incorporated **outlier removal** and integrated a **DBSCAN-based clustering** approach to remove noise points, significantly enhancing the accuracy and clarity of extracted curves.
 
-✅ Improved error handling for axis recognition using EasyOCR with confidence scoring.
+> These contributions improve the system’s ability to handle complex plots with multiple overlapping curves or visual artifacts.
 
-🔍 Specific Algorithmic Enhancements
-Enhanced Color Decomposition Strategy:
-In color_decomposition_, we proposed a novel color segmentation strategy based on region-wise recognition, improving curve separation in overlapping or noise-prone areas.
-
-Robust Curve Extraction with Noise Filtering:
-In final_achieve, we incorporated outlier removal and integrated a DBSCAN-based clustering approach to remove noise points, significantly enhancing the accuracy and clarity of extracted curves.
-
-These contributions improve the system’s ability to handle complex plots with multiple overlapping curves or visual artifacts.
 
 ---
 
