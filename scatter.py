@@ -18,7 +18,7 @@ from collections import defaultdict
 from sklearn.cluster import KMeans, DBSCAN
 import time
 from sklearn import metrics
-#path = os.getcwd() #获取py文件位置
+#path = os.getcwd()
 #pre_text_path = ".\scatter"
 
 def read_record(image_path):
@@ -51,7 +51,7 @@ class Data_extra:
             origin_data.append(json_data[j])
         t = origin_data[4]
         title = origin_data[3]
-        #获取原始坐标轴数据
+        #Get the original axis data
         x_data = []
         y_data = []
         u = []
@@ -59,7 +59,7 @@ class Data_extra:
             x_data.append(t[n][0])
             y_data.append(t[n][1])
         #frequency = defaultdict(int)
-        #设置阈值
+        #Setting the Threshold
         if len(x_data) > 30000:
             u1 = 50
             u2 = 70
@@ -88,7 +88,7 @@ class Data_extra:
 #            u = 1
         return x_data,y_data,title,u
     
-    def clear_line(self, u, x_data, y_data):#清除线上的信息
+    def clear_line(self, u, x_data, y_data):#Clear lines information
         x_dup = []
         y_dup = []
         frequency = defaultdict(int)
@@ -102,7 +102,7 @@ class Data_extra:
         #print("x_dup:",x_dup,"y_dup:",y_dup)
         return x_dup, y_dup
      
-    def clear_dup(self, x_data, y_data, x_dup, y_dup):#删除重复点
+    def clear_dup(self, x_data, y_data, x_dup, y_dup):#Delete Duplicate Points
         x_del = []
         y_del = []
         if x_dup == []:
@@ -120,7 +120,7 @@ class Data_extra:
         return x_del, y_del
         
                
-    def clear_lin(self, x_data, y_data, x_del, y_del):#对相邻点求均值
+    def clear_lin(self, x_data, y_data, x_del, y_del):#Find the average of adjacent points
         x_lin = [x_del[-1]]
         y_lin = [y_del[-1]]
         for k in range(len(x_del)-1,0,-1):
@@ -129,7 +129,7 @@ class Data_extra:
             elif 200 < x_del[k] < 300:
                 dis = 10
             elif 70 < x_del[k] < 200:
-                dis = 8   #一般是间隔有问题需要调整
+                dis = 8
             elif 30 < x_del[k] < 70:
                 dis = 5
             elif 18 < x_del[k] <= 30:
@@ -149,7 +149,7 @@ class Data_extra:
         y_lin.append(y_del[0])
         return x_lin, y_lin
     
-    def mean_line(self, x_dup, y_dup, x_lin, y_lin):#求均值
+    def mean_line(self, x_dup, y_dup, x_lin, y_lin):
         x = list()
         y = list()
         for o in range(len(x_lin)-1, 0, -2):
@@ -167,25 +167,25 @@ class Data_extra:
                 y.append(mean_y)
         return x, y
     
-    def test_Kmeans(self, X_Y):#求最合适的K-means
-        nums = range(3, 10) #最小k不能小于2
-        # ARI指数
+    def test_Kmeans(self, X_Y):#Find the most suitable K-means
+        nums = range(3, 10) #The minimum k cannot be less than 2
+        # ARI Index
         SILs = []
         Distances = []
         for num in nums:
             cls = KMeans(n_clusters=num, init='k-means++')
             cls.fit(X_Y)
             predicted_labels = cls.labels_
-            #Calinski-Harabaz指标
+            #Calinski-Harabaz indicator
 #            CH = metrics.calinski_harabasz_score(X_Y, predicted_labels)
-            #Silhouette指标
+            #Silhouette indicator
             count = list(set(predicted_labels))
             if len(count) == len(X_Y):
                 SILs.append(num)
                 break
             sil = metrics.silhouette_score(X_Y, predicted_labels, metric='euclidean')
             SILs.append(sil)
-            # 每个样本距离最近簇中心的距离之和
+            # Find the sum of the distances between each sample and the nearest cluster center
             Distances.append(cls.inertia_)
         num = nums[SILs.index(max(SILs))]
         return num
@@ -306,7 +306,7 @@ class Data_extra:
         x, y = self.mean_line(x_dup, y_dup, x_lin, y_lin)
         return x_dup, y_dup, x_del, y_del, x_lin, y_lin, x, y
                         
-    def save_line(self):#绘图
+    def save_line(self): #plot
         x_data,y_data,title,u= self.scatter_extra()
         if 18 < x_data[-1] <= 70:
             x_dup, y_dup, x_del, y_del, x_lin, y_lin, x, y = self.unpack_list(u, x_data, y_data)
@@ -336,8 +336,8 @@ class Data_extra:
         key_data = {'curve_color':title,'x_data':x,'y_data':y}
         with open(os.path.join(self.img_path_png, '{}.json'.format(self.filename)), 'wb' ) as fb:
             fb.write(orjson.dumps(key_data))
-#        plt.clf()#当plt内核为agg用
-        plt.show(block = False)#当plt内核为backend_inline用
+#        plt.clf()#When the plt kernel is agg
+        plt.show(block = False)#When the plt kernel is backend_inline
         return x, y, title
 
     def save_curve(self):
@@ -349,7 +349,7 @@ class Data_extra:
         title = json_data['color']
         x = xy[-1][0]
         y = xy[-1][1]
-        # 获取原始坐标轴数据
+        # Get the original axis data
         x_data = []
         y_data = []
         for n in range(0, len(origin_data)):
@@ -366,10 +366,10 @@ class Data_extra:
         key_data = {'curve_color': title, 'x_data': x, 'y_data': y}
         with open(os.path.join(img_scatter_png, '{}.json'.format(name)), 'wb') as fb:
             fb.write(orjson.dumps(key_data))
-        #        plt.clf()#当plt内核为agg用
-        plt.show(block=False)  # 当plt内核为backend_inline用
+        #        plt.clf()#When the plt kernel is agg
+        plt.show(block=False)  # When the plt kernel is backend_inline
         return x, y, title
-    def save_bar(self):#绘图
+    def save_bar(self):#plot
         x_data,y_data,title,u= self.scatter_extra()
 #        x_dup, y_dup = self.clear_line(u[0], x_data, y_data)
         x_dup, y_dup= [],[]
@@ -388,27 +388,21 @@ class Data_extra:
 #        key_data = {'curve_color':title,'x_data':x,'y_data':y}
 #        with open(os.path.join(self.img_path_png, '{}.json'.format(self.filename)), 'wb' ) as fb:
 #            fb.write(orjson.dumps(key_data))
-##        plt.clf()#当plt内核为agg用
-#        plt.show(block = False)#当plt内核为backend_inline用
+##        plt.clf()#When the plt kernel is agg
+#        plt.show(block = False)#When the plt kernel is backend_inline
         return x, y, title
     
 if __name__ == "__main__":
     start = time.time()
-    PATH = os.getcwd() # 获取当前文件的绝对路径
+    PATH = os.getcwd()
     scatter_path = ".\output_graph"
     for n in range(1,5):
         json_record_path = '.\\object_detection\\images_key_data\\images'+str(n)
         print(json_record_path)
-        json_record_path, filename = read_record(json_record_path)#读取record_json文件
+        json_record_path, filename = read_record(json_record_path)
         length = len(json_record_path) 
         num = 0
         for l in range(0, length):
-#        for l in (5,16,21,26,43,47,52,68):#images1
-#        for l in (23,26,35,36,40,42,51,63):#images2
-#        for l in (3,4,9,13,24,32,34):#images3,点太多的17,18,
-#        for l in (87,88,89,90):#images4
-#        for l in (5,6,11,16):#images5
-#        for l in range(74,88):
             with open(os.path.join(json_record_path[l]+'.json'), 'r', encoding='utf8') as fp:
                 json_data = json.loads(fp.read())
                 name = filename[l]

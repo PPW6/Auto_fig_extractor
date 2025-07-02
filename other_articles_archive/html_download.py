@@ -55,7 +55,7 @@ def doi_info(doi_str):
         doi_url = "https://doi.org/" + doi_str
         doi_database = "ASME International"
     elif doi_str[0:7] == "10.3390":
-        #解决MDPI页面跳转
+        #Solve MDPI publisher page jump
         all_url = get_all_url("https://doi.org/"+ doi_str)
         for url_str in all_url:
             if "htm" in url_str:

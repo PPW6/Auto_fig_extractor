@@ -67,10 +67,10 @@ class Origin_data_achieve:
         		y_axis_img = cv2.imread(os.path.join(img_path,YAXIS[:-4]+'png'))
 #        		print(os.path.join(img_path,YAXIS[:-4]+'png'))
         		[confidence, y_a1, y_box] = get_scaling(y_axis_json, y_axis_img, reader, allowlist, 'y')
-        		if confidence == 'unconfident':
-                    print(i, clustername, FILE, confidence)
-        			continue
-        		else:
-        			save_json(img_path, FILE, clustername, cluster, x_box, x_a1, y_box, y_a1)
-        			print(i, clustername, FILE, confidence)
+			if confidence == 'unconfident':
+				print(i, clustername, FILE, confidence)
+				continue
+			else:
+				save_json(img_path, FILE, clustername, cluster, x_box, x_a1, y_box, y_a1)
+				print(i, clustername, FILE, confidence)
 

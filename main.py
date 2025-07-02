@@ -21,15 +21,15 @@ def get_filename(scatter_path):
     FileNum = 0
     txtFileNum = 0
     Filename = []
-    # os.listdir(filePath)会读取出当前文件夹下的文件夹和文件
+    # os.listdir(filePath)
     for file in os.listdir(scatter_path): 
-        FileNum += 1 # 统计当前文件夹下的文件夹(不包含子文件夹)和文件的总数
+        FileNum += 1 # Count the total number of folders (excluding subfolders) and files under the current folder
         if file.endswith(".txt"):             
             txtFileNum += 1
             Filename.append(os.path.splitext(file)[0])
 #            print(os.path.splitext(file)[0])
-#    print(f'-------文件夹下的文件夹和文件总数为:{len(os.listdir(scatter_path))}个---------')
-#    print(f'-------文件夹下的txt文件总数为:{txtFileNum}个---------')
+#    print(f'-------The total number of folders and files under the folder is:{len(os.listdir(scatter_path))}---------')
+#    print(f'-------The total number of txt files under the folder is:{txtFileNum}---------')
     return Filename
 
 def graph_extra(scatter_path, image_path):
@@ -66,7 +66,6 @@ def final_data_extra(img_path_png, ocr_legend_path, ocr_model_path, filename, c_
     length = len(json_record_path)    
     all_file = []
     for l in range(0, length):
-#    for l in range(14, 18):
         with open(os.path.join(json_record_path[l]+'.json'), 'r', encoding='utf8') as fp:
             json_data = json.load(fp)
             name = filename[l]
@@ -126,9 +125,9 @@ def record2csv(name, excel_file, json_data):
     wb = load_workbook(excel_file)
     sheet = wb.active
 
-    # 获取当前工作表的最后一行
+    # Get the last row of the current worksheet
     if sheet.max_row == 1 and sheet.cell(row=1, column=1).value is None:
-       start_row = 1  # 空工作表
+       start_row = 1
     else:
        start_row = sheet.max_row + 1
 
@@ -181,13 +180,13 @@ def xy_normal(data):
         xy_data.append(data_normal)
     else:
         for i in range(0,len(data)):
-            data_normal = format(data[i], '.2f') #保留两位小数
-    #        data_normal = round(data[i]) #四舍五入
+            data_normal = format(data[i], '.2f') #Keep two decimal places
+    #        data_normal = round(data[i]) #rounding
             xy_data.append(data_normal)
     return xy_data
     
 if __name__ == "__main__":
-    PATH = os.getcwd() # 获取当前文件的绝对路径
+    PATH = os.getcwd()
     scatter_path = ".\\25output_graph"
     image_path = ".\object_detection\\images_key_data\\images7-curve"
     # graph_path = ".\input_graph"
@@ -196,18 +195,18 @@ if __name__ == "__main__":
     # cutpath = os.path.join(scatter_path, 'cut_graph')
     c_path = r".\dictionary\dictionary.ini"
     prop_name = 'UTS' #'conductivity', 'UTS', 'hardness'
-#    graph_name = graph_sure(graph_path, prop_name, scatter_path, c_path)#用prop_name选择图片后，需要筛选scatter_path不符合要求图片在跑后面程序
+#    graph_name = graph_sure(graph_path, prop_name, scatter_path, c_path)#After selecting the image with prop_name, you need to filter the images whose scatter_path does not meet the requirements before running the following program
 #     print('################## delete graph ##################')
 #     input("Please check the %s that is not curve and input 'ok'" % scatter_path)
-#     fa = graph_extra(scatter_path, image_path)#需要裁剪cutpath后再跑后面程序
+#     fa = graph_extra(scatter_path, image_path)#You need to cut the cutpath before running the following program
 #     print('################## cut graph ##################')
 #     input("Please check the %s that needs to be cropped and input 'ok'" % cutpath)
 # #    graph_cut(cutpath, image_path)
 #     print('################## parse graph ##################')
-#    fb = run() #解析单图曲线
+#    fb = run() #Extract single-plot graph curve
     img_scatter_png = ".\object_detection\scatter_line"
     excel_file = 'output.xlsx'
-    json_record_path, filename = read_record(image_path)#读取record_json文件
+    json_record_path, filename = read_record(image_path)
     all_file = final_data_extra(img_scatter_png, ocr_legend_path, ocr_model_path, filename, c_path)
     for l,json_data in enumerate(all_file):
         name = json_data['filename'][:-12]

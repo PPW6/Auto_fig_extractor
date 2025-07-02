@@ -37,9 +37,9 @@ class Color_decomposition:
         		print('colors: ',colorsrgb, type(colorsrgb))
         		save_palette([colorsrgb],os.path.join(img_path,image_name))
         		matrix = get_matrix(image_arr,colorsrgb)
-        		for i in range(1, len(colorsrgb)): #过滤掉（1,1,1）像素点的计算节约时间
+        		for i in range(1, len(colorsrgb)): #Filter out the (1,1,1) pixel to save calculation time
         			cluster = get_cluster_data(matrix,i)
-        			cluster = remove_cluster_abnormal_data(cluster)#在这里过滤掉不合适的cluster，再进行data_score
+        			cluster = remove_cluster_abnormal_data(cluster)#Filter out inappropriate clusters here and then perform data_score
         			if len(cluster)>160:
         				score_m = data_score_mult(cluster)
         				print('Cluster '+str(i)+' score: ', score_m)

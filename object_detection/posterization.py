@@ -122,7 +122,7 @@ def remove_cluster_abnormal_data(cluster, color, index, filename):
         for i in range(len(label_index)):    
             cluster_n.append(cluster[label_index[i]])
         if len(cluster_n)>40:
-    #        将cluster按x从小到大排序
+        #Sort cluster by x from small to large
             cluster_l2h = sorted(cluster_n, key=lambda x: x[0])
             cluster_x = [cluster_l2h[x][0] for x in range(0, len(cluster_l2h))]
             cluster_x_l2h = list(set(cluster_x))

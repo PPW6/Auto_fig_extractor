@@ -51,7 +51,7 @@ class File_Download:
         doi_ = doi_.replace("/", "-")
         print(url)
         path = os.path.join(self.output_path, doi_ + self.end)
-        if "RESOURCE_NOT_FOUND" not in r.content.decode()and "AUTHENTICATION_ERROR" not in r.content.decode() and "Bad Request"  not in r.content.decode():# 无法获取资源
+        if "RESOURCE_NOT_FOUND" not in r.content.decode()and "AUTHENTICATION_ERROR" not in r.content.decode() and "Bad Request"  not in r.content.decode():#Unable to obtain resource
             try:
                 self.data_totxt(r.content.decode(), path)
             except (OSError) as e:
@@ -68,9 +68,9 @@ class File_Download:
 if __name__ == '__main__':
 
     xls = xlrd.open_workbook(r".\infos.xlsx")
-    sht = xls.sheet_by_index(0)#sheet索引
-    dois = sht.col_values(0)#column索引
-    api_path = r".\APIkeys.txt"#保存APIkey的文本，APIkey从https://dev.elsevier.com/进行申请
+    sht = xls.sheet_by_index(0)
+    dois = sht.col_values(0)
+    api_path = r".\APIkeys.txt"#Save the text of APIkey, which can be applied from https://dev.elsevier.com/
     arformat = "text/xml"  # text/xml,text/plain
     corpus_type = "article" # article/abstract
     output_path = r".\xmls"
@@ -79,10 +79,10 @@ if __name__ == '__main__':
     count = len(dois)
     articles = []
     doi_error = dict()
-    start_id = dois.index('10.1016/j.ijmachtools.2023.104047')#为了防止网络问题断开下载，可以从这个DOI开始继续往下下载
+    start_id = dois.index('10.1016/j.ijmachtools.2023.104047')#In order to prevent network problems from interrupting the download, you can continue downloading from this DOI
     batch_id = 1
     key_id = 0
-    for i in range(0, count):# 当代码终止，将最新生成的doi所在dois中的索引（start_id）换掉这里的0
+    for i in range(0, count):# When the code terminates, replace the index (start_id) in the DOIS where the newly generated DOI is located with 0 here
         doi = fd.run(key_id,dois,i)
         print(doi)
 

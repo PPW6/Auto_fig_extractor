@@ -9,8 +9,8 @@ import sys
 sys.path.append("..")
 
 def run():
-    PATH_TO_DIR = 'images'#目标检测图片文件夹名
-    dirname = '.\object_detection'#当前文件夹
+    PATH_TO_DIR = 'images'#Target detection image folder name
+    dirname = '.\object_detection'#Current folder
 
     from object_detection.object_detection_curve import Save_boxes_json
     ff = Save_boxes_json(PATH_TO_DIR, dirname)

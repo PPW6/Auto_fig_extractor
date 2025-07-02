@@ -17,20 +17,20 @@ import sys
 import nltk
 sys.path.append("..")
 from dictionary.dictionary import Dictionary
-from paddle_ocr.ex_ocr import img_match
+from paddle_ocr.ocr import img_match
 from object_detection.posterization import read_image, detect_colors, hex2rgb
 
 
 def euclidean_distance(lab_color1, lab_color2):
-    # 计算两个颜色在Lab空间中的欧式距离
+    # Calculate the Euclidean distance between two colors in Lab space
     distance = np.linalg.norm(lab_color1 - lab_color2)
     normalized_distance = distance / math.sqrt(3 * (255**2))
     return distance
 
 
-# 计算欧氏距离
+# Calculate Euclidean distance
 def is_color_close(lab_color1, lab_color2, threshold):
-    # 判断两个颜色的接近程度
+    # Determine the proximity of two colors
     distance = euclidean_distance(lab_color1, lab_color2)
     print(lab_color1, lab_color2,distance)
     if distance < threshold:
@@ -38,7 +38,7 @@ def is_color_close(lab_color1, lab_color2, threshold):
     else:
         return False
 
-# 将 RGB 值转换为 Lab 值    
+# Convert RGB values to Lab values
 def rgb2lab(colorsrgb):
     [r,g,b] = colorsrgb
     rgb = (int(np.round(255*r)), int(np.round(255*g)), int(np.round(255*b)))
@@ -87,13 +87,13 @@ def get_color_text(filename, path_img, path_save, path_model, curve_color, c_pat
             for i in range(0, len(legend_names)):   
                 box = boxes[txts.index(legend_names[i])] 
                 print(legend_names[i])
-                # 获取矩形选框
-                x_left = int(box[0][0])  # 左上角x坐标
-                x_right = int(box[1][0]) # 右上角x坐标
-                y_top = int(box[0][1]) # 顶部y坐标
-                y_bottom = int(box[2][1]) # 底部y坐标
-                width = x_right-x_left # 区域宽度
-                height = y_bottom-y_top  # 区域高度
+                # Get the selection rectangle
+                x_left = int(box[0][0])  # x coordinate of the upper left corner
+                x_right = int(box[1][0]) # x coordinate of the upper right corner
+                y_top = int(box[0][1]) # Top y coordinate
+                y_bottom = int(box[2][1]) # Bottom y coordinate
+                width = x_right-x_left # Area Width
+                height = y_bottom-y_top  # Area Height
                 #roi = cv_image[y:y+height, x:x+width]
                 if y_top<y_bottom:
                     if 3*height < x_left:
@@ -235,7 +235,7 @@ def t_T(x_key,element):
         x_key = element
     return x_key
 
-# 显颜色信息
+# Display color information
 if __name__ == '__main__':
     PATH_TO_DIR = '..\object_detection\images'
     filename = '10.1016-j.jallcom.2020.155762-4-e.png'
@@ -244,9 +244,10 @@ if __name__ == '__main__':
     path_save = 'legends'
     color1 = '#eb1013'
     c_path = "..\dictionary\dictionary.ini"
-    # 打开图片
-    #image = Image.open('0.png') #PIL.PngImagePlugin.PngImageFile 不可以切片，可以获取点色素
+    # Open the image
+
+    #image = Image.open('0.png') #PIL.PngImagePlugin.PngImageFile cannot be sliced, but can get point pigments
     #color = image.getpixel((10, 20))
-#    cv_image = cv2.imread(path) #numpy.ndarray 可以切片
+#    cv_image = cv2.imread(path) #numpy.ndarray can be sliced
     txt = get_color_text(filename, path_img, path_save, path_model, color1, c_path)
     print(txt)

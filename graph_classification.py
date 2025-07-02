@@ -45,7 +45,7 @@ def get_txt(graph_path, prop_name, c_path):
                 data = file.read()
                 word = txt_sure(data, prop_name, c_path) 
                 if word:                    
-#                    print(length[i], '第', str(w)+'.txt')
+#                    print(length[i], 'No.', str(w)+'.txt')
                     wordpath = os.path.join(Path, length[i]+'-'+str(w))
                     word_path.append(wordpath)
     return word_path
@@ -62,7 +62,7 @@ def txt_sure(data, prop_name, c_path):
            return data
 
 if __name__ == "__main__":
-    PATH = os.getcwd() # 获取当前文件的绝对路径
+    PATH = os.getcwd()
     graph_path = ".\input_graph"
     c_path = r".\dictionary\dictionary.ini"
     scatter_path = ".\output_graph"

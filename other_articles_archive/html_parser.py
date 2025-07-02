@@ -58,7 +58,7 @@ class Html_parser():
                         content_find = True
                 if content_find:
                     content_exist.append(sole_file)
-                    # 若全文找不到段落标签
+                    # If the paragraph tag is not found in the entire text
                 if not all_parag:
                     self.log_wp.print_log("No paragraph label:%s",sole_file)
                     no_pargas.append(sole_file)
@@ -126,7 +126,7 @@ class Html_parser():
                 if content_find:
                     content_exist.append(sole_file)
 
-                # 若全文找不到段落标签
+                # If the paragraph tag is not found in the entire text
                 if not all_parag:
                     self.log_wp.print_log("No paragraph label:%s",sole_file)
                     no_pargas.append(sole_file)
@@ -163,7 +163,7 @@ class Html_parser():
                 all_parag = ''
                 content_find = None
                 for parag in parags:
-                    if content_label in str(parag.id) and "reference" not in str(parag.id):  # 避免参考文件信息加入到结果中
+                    if content_label in str(parag.id) and "reference" not in str(parag.id):  # Avoid including reference file information in the results
                         text = parag.text
                         if text[0].isupper() and len(text) > 300:
                             all_parag += '\n'
@@ -177,7 +177,7 @@ class Html_parser():
                 if content_find:
                     content_exist.append(sole_file)
 
-                # 若全文找不到段落标签
+                # If the paragraph tag is not found in the entire text
                 if not all_parag:
                     self.log_wp.print_log("No paragraph label:%s",sole_file)
                     no_pargas.append(sole_file)
@@ -231,7 +231,7 @@ class Html_parser():
                 if content_find:
                     content_exist.append(sole_file)
 
-                # 若全文找不到段落标签
+                # If the paragraph tag is not found in the entire text
                 if not all_parag:
                     self.log_wp.print_log("No paragraph label:%s",sole_file)
                     no_pargas.append(sole_file)
@@ -294,7 +294,7 @@ class Html_parser():
                         content_find = True
                 if content_find:
                     content_exist.append(sole_file)
-                    # 若全文找不到段落标签
+                    # If the paragraph tag is not found in the entire text
                 if not all_parag:
                     self.log_wp.print_log("No paragraph label:%s",sole_file)
                     no_pargas.append(sole_file)
