@@ -1,7 +1,7 @@
 
 # Curve Data Extraction - Enhanced Version
 
-This repository is based on the original automated curve data extraction project by [Viktoriia Baiburin et al.](https://github.com/ViktoriiaBaib/curvedataextraction.git). Below is a simplified installation and usage guide.
+This repository is based on the original automated curve data extraction project by [Baibakova, V., Elzouka, M., Lubner, S. et al. Optical emissivity dataset of multi-material heterogeneous designs generated with automated figure extraction. Sci Data 9, 589 (2022). https://doi.org/10.1038/s41597-022-01699-3](https://github.com/ViktoriiaBaib/curvedataextraction.git). Below is a simplified installation and usage guide.
 
 ---
 
@@ -17,7 +17,7 @@ conda activate imgrec
 ### 2. Install dependencies
 
 ```bash
-pip install tensorflow==2.7 protobuf easyocr opencv-python==4.5.4.60
+pip install tensorflow==2.7 protobuf==3.20.2 easyocr==1.7.1 opencv-python==4.6.0.66
 ```
 
 ### 3. Clone and install TF Object Detection API
@@ -33,25 +33,27 @@ python object_detection/builders/model_builder_tf2_test.py  # Check install
 
 ### 4. Download Pretrained Assets
 
-Download from [Google Drive](https://drive.google.com/file/d/1e0UTKwhgJN9DuD2qYsLcWcKd6WomvRkl/view?usp=sharing) and place the files accordingly in:
+Download from (https://drive.google.com/file/d/1e0UTKwhgJN9DuD2qYsLcWcKd6WomvRkl/view?usp=sharing) and place the files accordingly in:
 - `inference_graph/`
 - `training/`
 - `images/`
 - `utils/`
+- `protos/`
+- `core/`
 
 ### 5. Run Extraction Pipeline
 
 ```bash
-cd models/research/object_detection
+cd object_detection
 
 # Run axis and legend detection
-python object_detection_axes_legend.py
+python object_detection_curves.py
 
 # Run color decomposition
 python color_decomposition.py
 
 # Run final processing
-python final-record.py
+python final_achieve.py
 ```
 
 ---
@@ -67,10 +69,3 @@ We made the following customizations based on the original project:
 
 ---
 
-## 📖 Citation
-
-If you use this tool or any component, please cite the original paper:
-
-> https://www.nature.com/articles/s41597-022-01699-3
-
-Also credit the GitHub repository: https://github.com/ViktoriiaBaib/curvedataextraction.git
