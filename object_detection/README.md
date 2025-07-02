@@ -61,13 +61,10 @@ python final_achieve.py
 We made the following enhancements to improve robustness and accuracy:
 
 - **Enhanced Color Decomposition Strategy**  
-  In `color_decomposition_`, we proposed a novel color segmentation strategy **based on region-wise recognition**, improving curve separation in overlapping or noise-prone areas.
+  In `color_decomposition_`, we proposed a novel color segmentation strategy **based on region-wise recognition**, making system to correctly identify **black curves with colors similar to axes**, which were previously difficult to distinguish.
 
 - **Robust Curve Extraction with Noise Filtering**  
   In `final_achieve`, we incorporated **outlier removal** and integrated a **DBSCAN-based clustering** approach to remove noise points, significantly enhancing the accuracy and clarity of extracted curves.
-
-> These contributions improve the system’s ability to handle complex plots with multiple overlapping curves or visual artifacts.
-
 
 ---
 
