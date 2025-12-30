@@ -72,7 +72,7 @@ Auto_FDE/
 ----------------------
 If you use this work (data or code), please cite the following work as appropriate:
 ```
-Pei Y, Hua F, Hong Z, et al. Machine learning ready dataset of Cu-Cr alloys generated with automated figure data extraction. 2025.
+Yun, P., Fu, H., Zhang, H. ... Xie, J. Mechanical and Electrical Properties dataset of Cu-Cr-X alloys generated with automated figure data extraction. Sci Data 12, 2023 (2025). https://doi.org/10.1038/s41597-025-06295-9
 ```
 
 **License**
